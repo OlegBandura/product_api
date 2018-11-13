@@ -1,13 +1,13 @@
 # README
 
 GET #index - show all products
-  localhost:3000/
+  https://olko-product-api.herokuapp.com/
 
 GET #show - show product where ID = ...
-  localhost:3000/products/110
+  https://olko-product-api.herokuapp.com/products/110
 
 POST #create - add new product
-  localhost:3000/products
+  https://olko-product-api.herokuapp.com/products/
 
   JSON Example:
 
@@ -18,7 +18,7 @@ POST #create - add new product
   }
 
 PATCH #update - update product
-  localhost:3000/products/110
+  https://olko-product-api.herokuapp.com/products/110
 
   JSON Example:
 
@@ -32,8 +32,8 @@ Search products
 
   By name:
   GET #show - show product where name = ...
-  localhost:3000/search_product_by_name/Cucumber
+    https://olko-product-api.herokuapp.com/search_product_by_name/Cucumber
 
   By description:
   GET #show - show product where description = ...
-  localhost:3000/search_product_by_description/green
+    https://olko-product-api.herokuapp.com/search_product_by_description/green
