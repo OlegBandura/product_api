@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GET #index - show all products
+  localhost:3000/
 
-Things you may want to cover:
+GET #show - show product where ID = ...
+  localhost:3000/products/110
 
-* Ruby version
+POST #create - add new product
+  localhost:3000/products
 
-* System dependencies
+  JSON Example:
 
-* Configuration
+  {
+  "name": "Cucumber",
+  "description": "Great green cucumber",
+  "price": 25.30
+  }
 
-* Database creation
+PATCH #update - update product
+  localhost:3000/products/110
 
-* Database initialization
+  JSON Example:
 
-* How to run the test suite
+  {
+  "name": "Cabbage",
+  "description": "Green cabbage",
+  "price": 41.50
+  }
 
-* Services (job queues, cache servers, search engines, etc.)
+Search products
 
-* Deployment instructions
+  By name:
+  GET #show - show product where name = ...
+  localhost:3000/search_product_by_name/Cucumber
 
-* ...
+  By description:
+  GET #show - show product where description = ...
+  localhost:3000/search_product_by_description/green

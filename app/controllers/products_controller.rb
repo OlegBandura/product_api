@@ -28,11 +28,6 @@ class ProductsController < ApplicationController
     render json: product, status: :updated
   end
 
-  def search_by_name
-    product = Product.call(Product.by_name(params[:name]))
-    render json: product
-  end
-
   private
 
   def product_params
