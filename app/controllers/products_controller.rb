@@ -11,13 +11,26 @@ class ProductsController < ApplicationController
 
   def create
     product = Product.create!(
-      {
-        name: product_params[:name],
-        description: product_params[:description],
-        price: Product.to_cents(product_params[:price])
-      }
+      name: product_params[:name],
+      description: product_params[:description],
+      price: Product.to_cents(product_params[:price])
     )
     render json: product, status: :created
+  end
+
+  def update
+    product = Product.find(params[:id])
+    product.update!(
+      name: product_params[:name],
+      description: product_params[:description],
+      price: Product.to_cents(product_params[:price])
+    )
+    render json: product, status: :updated
+  end
+
+  def search_by_name
+    product = Product.call(Product.by_name(params[:name]))
+    render json: product
   end
 
   private

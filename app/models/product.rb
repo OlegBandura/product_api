@@ -2,7 +2,7 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
 
-  scope :by_description, ->(description) { where(description: description) }
+  scope :by_description, ->(description) { where('description LIKE ?', "%#{description}%") }
   scope :by_name, ->(name) { where(name: name) }
   scope :by_id, ->(id) { where(id: id) }
 
