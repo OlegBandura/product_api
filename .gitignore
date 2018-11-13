@@ -1,7 +1,7 @@
 *.gem
 *.rbc
 /.config
-/config/database.yml
+config/database.yml
 /coverage/
 /InstalledFiles
 /pkg/
