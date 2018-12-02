@@ -94,5 +94,25 @@ RSpec.describe Product, type: :model do
       let(:id) { Product.last }
       it { is_expected.to eq 1 }
     end
+
+    context 'without id' do
+      let(:id) { 0 }
+      it { is_expected.to eq 0 }
+    end
+
+    context 'with id' do
+      let(:id) { Product.last }
+      it { is_expected.to eq 1 }
+    end
+    
+    context 'without id' do
+      let(:id) { 0 }
+      it { is_expected.to eq 0 }
+    end
+
+    context 'with id' do
+      let(:id) { Product.last }
+      it { is_expected.to eq 1 }
+    end
   end
 end
