@@ -5,5 +5,9 @@ RSpec.describe SearchProductByNameController, type: :controller do
     it 'show product' do
       expect(response).to have_http_status(:ok)
     end
+
+    it 'show product' do
+      expect(response).to have_http_status(:ok)
+    end
   end
 end

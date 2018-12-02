@@ -69,6 +69,36 @@ RSpec.describe Product, type: :model do
       let(:name) { 'Cucumber' }
       it { is_expected.to eq 1 }
     end
+  end  
+  
+  context '.by_name' do
+    subject { described_class.by_name(name).count }
+    before { FactoryBot.create(:product) }
+
+    context 'without word in name' do
+      let(:name) { 'blabla' }
+      it { is_expected.to eq 0 }
+    end
+
+    context 'with present wotd in name' do
+      let(:name) { 'Cucumber' }
+      it { is_expected.to eq 1 }
+    end
+  end
+  
+  context '.by_name' do
+    subject { described_class.by_name(name).count }
+    before { FactoryBot.create(:product) }
+
+    context 'without word in name' do
+      let(:name) { 'blabla' }
+      it { is_expected.to eq 0 }
+    end
+
+    context 'with present wotd in name' do
+      let(:name) { 'Cucumber' }
+      it { is_expected.to eq 1 }
+    end
   end
 
   context '.by_id' do

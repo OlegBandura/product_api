@@ -21,5 +21,10 @@ RSpec.describe ProductsController, type: :controller do
       # expect { post :create, described_class.new.create }.to change(Product, :count).by(1)
       expect(response).to have_http_status(:ok)
     end
+
+    it 'add new product' do
+      product_params = FactoryBot.attributes_for(:good)
+      expect(response).to have_http_status(:ok)
+    end
   end
 end
