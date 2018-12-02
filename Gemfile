@@ -34,6 +34,10 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'
+  gem 'rubocop'
+  gem 'rubocop-checkstyle_formatter', require: false
+  gem 'simplecov', require: false
+  gem 'ci_reporter_rspec'
 end
 
 group :development do
